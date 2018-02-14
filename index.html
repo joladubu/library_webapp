@@ -1,0 +1,452 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reader's Bay</title>
+	 <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <strong><a class="navbar-brand" href="#"><span>READERS</span><span> BAY</span></a></strong>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form id="find" class="navbar-form navbar-right ">
+        <div class="form-group">
+          <input id="input" type="text" class="form-control" placeholder="Search Library">
+        </div>
+        <button id="search" type="submit" class="btn btn-primary">Search</button>
+      </form>
+      <div id="sign" class="nav navbar-nav pull-right">
+        <button id="login" type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#register-open">Log In
+        </button>
+          <div id="register-open" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content" align="center">
+                    <div class="modal-body">
+                      <form class="infos">
+                      <h4>Welcome Back</h4>
+                      <hr>
+                      <input type="name" placeholder="Enter Username"style="width:250px; height:30px;"> 
+                      <br>
+                      <br>
+                      <input type="password" placeholder="Enter Password" style="width:250px; height:30px; ">
+                      <br>
+                      <br>
+                      </form>
+                    </div>
+                    <a href="userprofile.html"><button type="button" class="btn btn-info"  >Login</button></a>
+                    <a href="#">Forgot Password?</a>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" data-dismiss="modal">close</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+      
+        <button id="signup" type="button" class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#register-modal">Register</button>
+        <div id="register-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                  <div class="modal-header" align="center">
+                    <h4>Register to borrow a book</h4>
+                     <hr style="border: 3px #f7f7f7;">
+                  </div>
+                  <div class="modal-body" align="center">
+                    <h2 style="color:blue;">REGISTRATION</h2>
+                  
+                      <div>
+                          <form>
+                          <input type="name" placeholder="Surname" style="width:350px; " > 
+                          <br>
+                          <br>
+                          <input type="other" placeholder="Other Names" style="width:350px;"  >
+                          <br>
+                          <br>
+                          <input type="use" placeholder="Username" style="width:350px;" >
+                          <br>
+                          <br>
+                          <input type="sex" placeholder="Sex" style="width:350px;" >
+                          <br>
+                          <br>
+                          <input type="num" placeholder="Mobile" style="width:350px;" >
+                          <br>
+                          <br>
+                          <input type="email" placeholder="Enter Email" style="width:350px;">
+                          <br>
+                          <br>
+                          <input type="password" placeholder="Password" style="width:350px;" >
+                          <br>
+                          <br>
+                          <input type="retype" placeholder="Retype-Password" style="width:350px;" >
+                          <br>
+                          <br>
+                          </form>
+                       <button class="btn btn-info" data-dismiss="modal" style="width:100px; height:50px; border-radius:3px;">Sign up</button>
+                     </div>
+                    <br>
+                    <div class="">
+                      <h6><span style="opacity:0.5">By Clicking "Sign up" I agree to the <strong>Readers Bay </strong></span><a href="#">Terms of Service</a></h6>
+                      <div class="modal-footer">
+                       <button class="btn btn-danger" data-dismiss="modal">close</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+  </nav>
+    
+<div class="dropdown visible-xs navbar-fixed-top"><!-- Menu that displays only for extra small screens -->
+    <button class="btn btn-primary dropdown-toggle btn-xs " type="button" data-toggle="dropdown">Menu
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu role="menu" aria-labelledby="menu1">
+      <li><a tabindex="-1" href="#">Home</a></li>
+      <li><a tabindex="-1" href="#books">Content</a></li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#kids">Collection <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#kids">Kids</a></li>
+          <li><a tabindex="-1" href="#adolesence">Adolesence</a></li>
+          <li><a tabindex="-1" href="#adults">Adults</a></li>
+        </ul>
+      </li>
+      <li><a tabindex="-1" href="#favourites">Favourites</a></li>
+      <li><a tabindex="-1" href="#favourites">Contact us</a></li>
+    </ul>
+  </div>
+<nav id="subnav" class="navbar navbar-default navbar-fixed-bottom hidden-xs">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+        <li><a href="#heading">Home</a></li>
+        <li><a href="#kids">Content</a></li>
+        <li>
+          <div class="dropup">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Collection
+            <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#kids">Kids</a></li>
+              <li><a href="#adolesence">Adolesences</a></li>
+              <li><a href="#adults">Adults</a></li>
+              <li role="separator" class="divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#favourites">Favorites</a></li>
+        <li><a href="#favourites">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="carousel-example-generic" class="carousel-fade carousel slide hidden-xs" data-ride="carousel">
+  <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#mycarousel" data-slide-to="1" class=""></li>
+      <li data-target="#mycarousel" data-slide-to="2" class=""></li>
+      <li data-target="#mycarousel" data-slide-to="3" class=""></li>
+    </ol>
+      <section class="block">
+        <div id="myCarousel" class="carousel-inner carousel-zoom carousel slide">
+          <div class="carousel-inner">
+            <div  class="item active">
+              <img src="img/girl.jpg" alt="Slide0" class="img-responsive">
+                <div id="caption" class="carousel-caption">
+                  <div class="t1">
+                    <strong><h1>Read &amp; Grow</h1></strong>
+                    <p class="lead">Making the world a better place through reading</p>
+                    <a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#register-modal">Join today</a>
+                  </div>
+                </div>
+            </div>
+            <div id="image2" class="item">
+              <img src="img/student.jpg" alt="Slide1" class="img-responsive">
+              <div id="caption" class="carousel-caption">
+                <div class="t2">
+                  <strong><h1>Always Ahead</h1></strong>
+                  <p class="lead">My Life began when I got my Library right</p>
+                  <a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#register-modal">Join today</a>
+                </div>
+            </div>
+            </div>
+            <div class="item">
+              <img src="img/lib.jpg" alt="Slide2" class="img-responsive">
+              <div id="caption" class="carousel-caption">
+                <div class="t3">
+                  <strong><h1>Always Ahead</h1></strong>
+                  <p class="lead">My Life began when I got my Library card</p>
+                  <a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#register-modal">Join today</a>
+                </div>
+              </div>
+            </div>
+             <div class="item">
+              <img src="img/karoc.jpg" alt="Slide2" class="img-responsive">
+              <div id="caption" class="carousel-caption">
+                <div class="t4">
+                  <strong><h1>Brightly</h1></strong>
+                  <p class="lead">Raise kids who love to read.</p>
+                  <a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#register-modal">Join today</a>
+                </div>
+              </div>
+            </div>
+       <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="icon-prev" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="icon-next" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            
+          </div>
+        </div>   
+      </section>
+  </div>
+  <div><img src="img/girl.jpg" class="img-responsive visible-xs" alt="Responsive image">
+    <!-- <div class="t1 visible-xs">
+      <strong><h1>Read &amp; Grow</h1></strong>
+      <p class="lead">Making the world a better place through reading</p>
+      <a class="btn btn-lg btn-primary" href="#" data-toggle="modal" data-target="#register-modal">Join today</a>
+    </div> -->
+  </div>
+	<!-- Collection having books and articles -->
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div id="books">
+           <strong><h2 class="text-center">BOOKS</h2></strong>
+        </div>
+<!-- 
+         <button type="button" class="btn btn-info text-center" data-toggle="collapse" data-target="#demo">BOOKS</button>
+         <div id="demo" class="collapse"> -->
+        
+          <div class="row">
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b1.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b3.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b5.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b7.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b10.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b12.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b13.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b14.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b15.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b16.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b17.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b18.jpg" class="img-responsive"></a></div>
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b1.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b3.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b5.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b7.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b10.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b12.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b13.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b14.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b15.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b16.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b17.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b18.jpg" class="img-responsive"></a></div>
+          </div>
+          <br>
+          
+          <div class="row">
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b1.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b3.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b5.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b7.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b10.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b12.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b13.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b14.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b15.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b16.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b17.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b18.jpg" class="img-responsive"></a></div>
+          </div>
+          </div>
+          <br>
+          <p class="pull-right"><a href="#">See more<span class="glyphicon glyphicon-forward"></span></a></p>
+  </div>
+</div>
+  <div class="container-fluid">
+    <div class="col-md-12">
+        <div id="kids">
+           <strong><h2 class="text-center">KIDS</h2></strong>
+        </div>
+        <div id="kids" class="row">
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/c9.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/c8.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/c3.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/c10.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/c5.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/c6.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <br>
+            <p class="pull-right"><a href="#">See more<span class="glyphicon glyphicon-forward"></span></a></p>
+        </div>
+    </div>
+  </div>
+  <br>
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div id="adolesence">
+           <strong><h2 class="text-center">ADOLESENCE</h2></strong>
+        </div>
+        <div id="adolesence" class="row">
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/2.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/4.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/6.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/8.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/10.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/12.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <br>
+            <p class="pull-right"><a href="#">See more<span class="glyphicon glyphicon-forward"></span></a></p>
+        </div>
+      </div>
+    </div>
+   <div class="container-fluid">
+    <div class="col-md-12">
+       <div id="adults">
+           <strong><h2 class="text-center">ADULTS</h2></strong>
+        </div>
+        <div id="adults" class="row">
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/ad1.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/ad2.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/ad3.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/ad4.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/ad5.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6 grow"><a href="#"><img src="img/ad6.jpg" class="img-responsive" style="width: 300px; height: 250px;"></a></div>
+            <br>
+            <p class="pull-right"><a href="#">See more<span class="glyphicon glyphicon-forward"></span></a></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="col-md-12">
+        <div id="favourites">
+           <strong><h2 class="text-center">FAVOURITES</h2></strong>
+        </div>
+        
+          <div class="row">
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b1.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b3.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b5.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b7.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b10.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b12.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b13.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b14.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b15.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b16.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b17.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b18.jpg" class="img-responsive"></a></div>
+          </div>
+          <br>
+  
+          <div class="row">
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b1.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b3.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b5.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b7.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b10.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b12.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b13.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b14.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b15.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b16.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b17.jpg" class="img-responsive"></a></div>
+            <div class="col-md-1 col-sm-2 col-xs-3 grow"><a href="#"><img src="img/b18.jpg" class="img-responsive"></a></div>
+          </div>
+          <br>
+          <p class="pull-right"><a href="#">See more<span class="glyphicon glyphicon-forward"></span></a></p>
+  </div>
+</div>
+
+ <footer class="panel-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <section id="quotes" class="col-md-4 col-sm-12 col-xs-12 text-center">
+          <strong><span>Quotes:</span></strong><br>
+          "When you read a good book, somewhere in the world a door opens to allow in more light"<br><br>
+          "Any book that helps a child to form a habit of reading, to make reading one of his deep and continuing needs, is good for him"<br><br>
+          "Great books helps you understand. and they help you feel understood"<br>
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-md-4 col-sm-12 col-xs-12 text-center">
+          <strong><span>Address:</span><br></strong>
+          Plot 24 Adebisi Ogunniyi Crescent<br>
+          Ikate, Lekki<br>
+          Lagos, Nigeria
+         <hr class="visible-xs"><br>
+         <h3 class="text-center">Contact Us</h3><br>
+         <div class="row">
+         <section id="socials" class="col-sm-12 text-center">
+            <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-4x social"></i></a>
+            <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-4x social"></i></a>
+            <a href="#"><i id="social-in" class="fa fa-instagram fa-4x social"></i></a>
+            <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-4x social"></i></a>
+            <a href="#"><i id="social-em" class="fa fa-envelope-square fa-4x social"></i></a> 
+            <div class="text-center">&copy; Copyright TeamThree 2016</div>
+         </section>
+
+        </section> <br>
+        
+
+        <section id="map" class="col-md-4 col-sm-12 col-xs-12 text-center">
+          <strong><span>Map</span></strong><br>          
+          <a href="https://www.google.com.ng/maps/place/Audax+Solutions+Limited/@6.4346052,3.4776348,17z/data=!3m1!4b1!4m5!3m4!1s0x103bf5b42784ea83:0x4a0b007c64b7f703!8m2!3d6.4346052!4d3.4798235" target="_blank">
+            <div id="map-tile">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6841147360483!2d3.4776348143641775!3d6.434605195344627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5b42784ea83%3A0x4a0b007c64b7f703!2sAudax+Solutions+Limited!5e0!3m2!1sen!2sng!4v1479382135397" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </a>
+        </section>
+        
+       <!-- 
+    <div class="jumbotron">
+     <h3 class="text-center">Contact Us</h3><br>
+      <div class="row">
+        <section id="socials" class="col-sm-12 text-center">
+            <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-4x social"></i></a>
+            <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-4x social"></i></a>
+            <a href="#"><i id="social-in" class="fa fa-instagram fa-4x social"></i></a>
+            <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-4x social"></i></a>
+            <a href="#"><i id="social-em" class="fa fa-envelope-square fa-4x social"></i></a> 
+            <div class="text-center">&copy; Copyright TeamThree 2016</div>
+        </section>
+      </div> -->
+   </div>
+  </footer>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

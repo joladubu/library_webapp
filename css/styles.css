@@ -1,0 +1,388 @@
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+    
+ position: relative;
+ background: #ba89b6;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #986794;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+#find{
+	margin-top: 10px;
+	margin-right: -15px;	
+}
+
+#signup, #login {
+	margin-right: 10px;
+	width: 80px;
+	height: 40px;
+}
+
+#sign {
+	margin-top: 1.5px;
+	margin-right: 10px;	
+}
+
+.form-group input, #search {
+	height: 40px;
+}
+
+.navbar-brand {
+	font-size: 2em;
+	color: red;
+}
+
+.navbar-brand span:nth-child(1){
+	color: #0099cc;
+}
+
+.navbar-brand span:nth-child(2){
+	color: #ff3333;
+}
+
+.navbar-fixed-bottom{
+	background-color: black;
+		}
+
+#dropdownMenu1 {
+	font-family: 'Merriweather', serif;
+	font-size: 0.9em
+}
+
+.carousel .item img {
+    width: 100%;
+    height: 640px;    
+}
+
+.t1 {
+	margin: auto;
+	display: block;
+	font-family: 'Catamaran', serif;
+	font-size: 100%;
+	
+	}
+
+.t2	{
+	font-family: 'Catamaran', serif;
+		}
+
+.t3	{
+	font-family: 'Catamaran', serif;
+	}
+
+.t4	{
+	font-family: 'Catamaran', serif;
+	margin:auto;
+	}
+
+#books {
+	padding-bottom: 20px;
+	}
+
+#books h2 {
+	font-weight: bold;
+	font-size: 2em;
+	font-family: 'Merriweather', serif;
+	}
+
+#kids {
+	padding-bottom: 20px;
+	}
+
+#kids h2 {
+	font-weight: bold;
+	font-size: 2em;
+	font-family: 'Merriweather', serif;
+}
+
+#adolesence {
+	padding-bottom: 20px;
+}
+
+#adolesence h2 {
+	font-weight: bold;
+	font-size: 2em;
+	font-family: 'Merriweather', serif;
+}
+
+#adults {
+	padding-bottom: 20px;
+}
+
+#adults h2 {
+	font-weight: bold;
+	font-size: 2em;
+	font-family: 'Merriweather', serif;
+}
+
+#favourites {
+	padding-bottom: 20px;
+}
+
+#favourites h2 {
+	font-weight: bold;
+	font-size: 2em;
+	font-family: 'Merriweather', serif;
+}
+
+#subnav{
+	margin-top: 100px;
+	background-color: black;
+	opacity: 0.8;
+}
+
+#landing {
+	margin-top: 80px;
+}
+
+#kids div img {
+	width: 300px;
+	height: 250px;
+}
+
+.dropup {
+	margin-top: 10px;
+	color: black;
+	opacity: 0.8;
+}
+
+.dropdown {
+	position: fixed;
+	left: 10px;
+	top: -40px;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 60px;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.navbar-fixed-top {
+	margin-top: 50px;
+}
+
+#carousel-example-generic {
+	margin-top: -20px;
+	background-color: black;
+}
+
+.grow { 
+	transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+	transform: scale(1.6); 
+}
+
+footer {
+	margin-bottom:180px
+}
+
+#socials{
+	margin-bottom:10px;
+	position: static;	
+}
+
+#user-img {
+	height: 200px;
+}
+
+#home {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#quotes, #address {
+	margin-top: 20px;
+}
+
+#quotes span, #address span, #map span {
+	font-size: 1.5em
+}
+
+#map span {
+	margin-top: -100px;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+  overflow:hidden;
+}
+
+.item.active img {
+    transition: transform 5000ms linear 0s;
+    /* This should be based on your carousel setting. For bs, it should be 5second*/
+    transform: scale(1.05, 1.05);
+}
+
+/*	New Intro*/
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+
+
+
+
+/*Media Query*/
+
+@media (min-width: 992px ) {
+	.carousel-inner .active.left {
+		left: -25%;
+	}
+	.carousel-inner .next {
+		left:  25%;
+	}
+	.carousel-inner .prev {
+		left: -25%;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px ) {
+	.carousel-inner .active.left {
+		left: -33.3%;
+	}
+	.carousel-inner .next {
+		left:  33.3%;
+	}
+	.carousel-inner .prev {
+		left: -33.3%;
+	}
+	.active > div:first-child {
+		display:block;
+	}
+	.active > div:first-child + div {
+		display:block;
+	}
+	.active > div:last-child {
+		/*display:none;*/
+	}
+	.col-sm-2 {
+		margin-bottom: 20px;
+	}
+	.col-sm-3 {
+		margin-bottom: 20px;
+	}
+	
+}
+
+@media (max-width: 767px) {
+	.carousel-inner .active.left {
+		left: -100%;
+	}
+	.carousel-inner .next {
+		left:  100%;
+	}
+	.carousel-inner .prev {
+		left: -100%;
+	}
+	.active > div {
+		/*display:none;*/
+	}
+	.active > div:first-child {
+		display:block;
+	}
+	#sign {
+		margin-bottom: 100px;
+		margin: 0 auto 0;	
+	}
+	#signup, #login {
+		margin-top: -98px;
+	}
+	#find {
+	margin-top: 50px;	
+	}
+
+	.col-xs-3 {
+		margin-bottom: 20px;
+	}
+	.col-xs-6 {
+		margin-bottom: 20px;
+	}
+}
+
+				/*New Intros*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(1, 2, 3);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
